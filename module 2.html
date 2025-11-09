@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Info | Bright Future International School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Bright Future International School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">School Info</a></li>
+          <li class="nav-item"><a class="nav-link active" href="admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link" href="student.html">Student Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="fee.html">Fee Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="exam.html">Exam Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="timetable.html">Timetable</a></li>
+          <li class="nav-item"><a class="nav-link" href="transport.html">Transport</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Admission Form -->
+  <section class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg p-4">
+          <h2 class="text-center text-warning mb-4">Admission Form</h2>
+          <form id="admissionForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter student's full name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Class Applying For</label>
+                <select class="form-select" required>
+                  <option value="">Select Class</option>
+                  <option>Nursery</option>
+                  <option>KG</option>
+                  <option>Class 1</option>
+                  <option>Class 2</option>
+                  <option>Class 3</option>
+                  <option>Class 4</option>
+                  <option>Class 5</option>
+                  <option>Class 6</option>
+                  <option>Class 7</option>
+                  <option>Class 8</option>
+                  <option>Class 9</option>
+                  <option>Class 10</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Gender</label>
+                <select class="form-select" required>
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Parent's Name</label>
+                <input type="text" class="form-control" placeholder="Enter parent's full name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" rows="3" placeholder="Enter full address" required></textarea>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-warning px-4">Submit</button>
+              <button type="reset" class="btn btn-secondary px-4 ms-2">Reset</button>
+            </div>
+          </form>
+          <p id="responseMsg" class="text-success text-center mt-3"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3 mt-5">
+    <p>&copy; 2025 Bright Future International School. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("admissionForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("responseMsg").textContent = "Admission form submitted successfully!";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
